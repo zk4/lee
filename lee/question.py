@@ -44,7 +44,6 @@ class Question:
         self._enableRunCode = question["enableRunCode"]
         self._metaData =question["metaData"]
         self._translatedContent = question["translatedContent"]
-        logger.info(type (question["codeSnippets"]))
         code_definations= question["codeSnippets"]
         for  code in code_definations:
                 self._codeDefinition[code["langSlug"].lower()]=code["code"]
