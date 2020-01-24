@@ -1,4 +1,4 @@
-
+#coding: utf-8
 from termcolor import colored
 import logging
 import json

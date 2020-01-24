@@ -1,3 +1,4 @@
+#coding: utf-8
 from .lee import entry_point
 from .lee import main
 

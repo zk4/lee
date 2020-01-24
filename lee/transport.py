@@ -1,3 +1,4 @@
+#coding: utf-8
 import requests,pickle
 from diskcache import FanoutCache,Cache
 import re

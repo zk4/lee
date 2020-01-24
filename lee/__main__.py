@@ -1,3 +1,4 @@
+#coding: utf-8
 from .lee import entry_point
 
 if __name__ == '__main__':

@@ -1,3 +1,4 @@
+#coding: utf-8
 language_exts = {
     "python" :["#","py"],
     "python3" :["#","py"],

@@ -1,3 +1,4 @@
+#coding: utf-8
 class Solution:
     def __init__(self):
         self._raw_edge =None

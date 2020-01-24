@@ -1,3 +1,4 @@
+#coding: utf-8
 # a smple lexer just for teminal display
 from pygments import highlight
 from pygments.lexers import PythonLexer,CppLexer,MarkdownLexer,JavascriptLexer, JavascriptSmartyLexer, JavaLexer
