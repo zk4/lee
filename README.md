@@ -1,10 +1,13 @@
 Yet Anther LeetCode Cli
 
 # Api is similar to git
-- lee show 
+- lee ls 
+	lee ls 1 
 - lee pull 
+	lee pull 1
 - lee push 
-- lee log 
+	lee push 1
+	
 
 # install
 ```bash
