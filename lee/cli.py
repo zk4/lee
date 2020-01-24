@@ -1,12 +1,13 @@
 #coding: utf-8
 from .transport import Transport
+from .question import Question
 from  diskcache import Cache
 import logging
 logger = logging.getLogger(__name__)
 class Cli:
     def __init__(self):
         self.transport =Transport()
-        self.cache_questions = Cache("~/.config/lee/questions5")
+        self.cache_questions = {}
 
     def login(self,email,pwd):
         return self.transport.login(email,pwd)
@@ -31,7 +32,7 @@ class Cli:
 
     def findAll(self,reverse=True):
         self.find(1)
-        ints = [int(x) for x in self.cache_questions.iterkeys()]
+        ints = [int(x) for x in self.cache_questions.keys()]
         for qid in sorted(ints,reverse=reverse):
             yield self.find(qid)
 
@@ -46,7 +47,8 @@ class Cli:
                 q = Question()
                 q.load_from_raw_question(r)
                 for c in chinese:
-                    if q.qid == str(c["question"]["questionId"]): 
+                    # logger.info(c)
+                    if q.qid == str(c["questionId"]): 
                         q.load_from_translation(c)
                         self.cache_questions[q.qid]=q
                         break 

@@ -1,4 +1,6 @@
 import json
+import logging
+logger = logging.getLogger(__name__)
 
 
 class Question:
@@ -42,9 +44,10 @@ class Question:
         self._enableRunCode = question["enableRunCode"]
         self._metaData =question["metaData"]
         self._translatedContent = question["translatedContent"]
-        code_definations= json.loads(question["codeDefinition"])
+        logger.info(type (question["codeSnippets"]))
+        code_definations= question["codeSnippets"]
         for  code in code_definations:
-                self._codeDefinition[code["value"].lower()]=code["defaultCode"]
+                self._codeDefinition[code["langSlug"].lower()]=code["code"]
         print("_sampleTestCase",self._sampleTestCase)
         
     

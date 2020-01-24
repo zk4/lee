@@ -4,7 +4,8 @@ import re
 import json
 import time
 
-
+import logging
+logger = logging.getLogger(__name__)
 # proxy_on={"verify":False}
 proxy_on={}
 class Transport:
@@ -66,20 +67,22 @@ class Transport:
 
 
     def questions(self):
-        payload = "{\"query\":\"query getQuestionTranslation($lang: String) {\\n  translations: allAppliedQuestionTranslations(lang: $lang) {\\n    title\\n    question {\\n      questionId\\n    }\\n  }\\n}\\n\",\"variables\":{},\"operationName\":\"getQuestionTranslation\"}"
+        payload = "{\"operationName\":\"getQuestionTranslation\",\"variables\":{},\"query\":\"query getQuestionTranslation($lang: String) {\\n  translations: allAppliedQuestionTranslations(lang: $lang) {\\n    title\\n    questionId\\n    __typename\\n  }\\n}\\n\"}"        
         response = self._graphql(payload)
         if not response.ok:
             raise Exception(response)
         return response.json()
 
     def question_detail(self,eng_question_name):
-        payload = "{\"query\":\"query getQuestionDetail($titleSlug: String!) {\\n  question(titleSlug: $titleSlug) {\\n    content\\n    stats\\n    codeDefinition\\n    sampleTestCase\\n    enableRunCode\\n    metaData\\n    translatedContent\\n  }\\n}\",\"variables\":{\"titleSlug\":\""+eng_question_name+"\"},\"operationName\":\"getQuestionDetail\"}"
+        logger.info("question name: "+eng_question_name)
+        payload = "{\"operationName\":\"questionData\",\"variables\":{\"titleSlug\":\""+eng_question_name+"\"},\"query\":\"query questionData($titleSlug: String!) {\\n  question(titleSlug: $titleSlug) {\\n    questionId\\n    questionFrontendId\\n    boundTopicId\\n    title\\n    titleSlug\\n    content\\n    translatedTitle\\n    translatedContent\\n    isPaidOnly\\n    difficulty\\n    likes\\n    dislikes\\n    isLiked\\n    similarQuestions\\n    contributors {\\n      username\\n      profileUrl\\n      avatarUrl\\n      __typename\\n    }\\n    langToValidPlayground\\n    topicTags {\\n      name\\n      slug\\n      translatedName\\n      __typename\\n    }\\n    companyTagStats\\n    codeSnippets {\\n      lang\\n      langSlug\\n      code\\n      __typename\\n    }\\n    stats\\n    hints\\n    solution {\\n      id\\n      canSeeDetail\\n      __typename\\n    }\\n    status\\n    sampleTestCase\\n    metaData\\n    judgerAvailable\\n    judgeType\\n    mysqlSchemas\\n    enableRunCode\\n    envInfo\\n    book {\\n      id\\n      bookName\\n      pressName\\n      description\\n      bookImgUrl\\n      pressImgUrl\\n      productUrl\\n      __typename\\n    }\\n    isSubscribed\\n    __typename\\n  }\\n}\\n\"}" 
         response = self._graphql(payload)
         if not response.ok:
             raise Exception(response)      
         return response.json()
 
     def _graphql(self,payload):
+
         url = "https://leetcode-cn.com/graphql" 
         headers = {
             'X-Requested-With': "XMLHttpRequest",
@@ -91,7 +94,7 @@ class Transport:
             }
         response = self.session.request("POST", url, data=payload, headers=headers,**proxy_on)
         if not response.ok:
-            raise Exception(response)
+            logger.error(response)
         return response  
     
     def _basic(self,name):
