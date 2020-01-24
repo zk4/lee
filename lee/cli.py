@@ -1,6 +1,6 @@
 #coding: utf-8
 from .transport import Transport
-from diskcache import FanoutCache,Cache
+from  diskcache import FanoutCache,Cache
 import logging
 logger = logging.getLogger(__name__)
 class Cli:
