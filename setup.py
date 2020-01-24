@@ -5,8 +5,8 @@ VERSION = (2, 1, 0)
 __version__ = '.'.join(map(str, VERSION[0:3]))
 __description__ = '''this is a description'''
 __author__ = 'zk'
-__author_email__ = 'mailsforabhinav@gmail.com'
-__homepage__ = 'https://github.com/abhinavsingh/proxy.py'
+__author_email__ = ''
+__homepage__ = 'https://github.com/zk4/lee'
 __download_url__ = '%s/archive/master.zip' % __homepage__
 __license__ = 'BSD'
 

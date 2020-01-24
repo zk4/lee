@@ -8,7 +8,7 @@ Yet Anther LeetCode Cli
 
 # install
 ```bash
-pip install lee
+sudo pip install lee==2.1.0
 ```
 
 

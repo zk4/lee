@@ -47,13 +47,13 @@ pure-all: env-rm rm env install test run
 
 
 	
-upload-to-test: clean
-	python setup.py bdist_wheel --universal
+upload-to-test: rm  
+	python setup.py bdist
 	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
 
-upload-to-prod: clean
-	python setup.py bdist_wheel --universal
+upload-to-prod: rm  
+	python setup.py bdist
 	twine upload dist/*
 
 
