@@ -1,0 +1,17 @@
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/EGG-INFO/dependency_links.txt
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/EGG-INFO/entry_points.txt
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/EGG-INFO/not-zip-safe
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/EGG-INFO/PKG-INFO
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/EGG-INFO/SOURCES.txt
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/EGG-INFO/top_level.txt
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/rabbit/__init__.py
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/rabbit/__main__.py
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/rabbit/rabbit.py
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/rabbit/__pycache__/__init__.cpython-37.pyc
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/rabbit/__pycache__/__main__.cpython-37.pyc
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/rabbit/__pycache__/rabbit.cpython-37.pyc
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/rabbit/logx/__init__.py
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/rabbit/logx/setup_logging.py
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/rabbit/logx/__pycache__/__init__.cpython-37.pyc
+/Users/zk/git/pythonPrj/best_practice/env/lib/python3.7/site-packages/modulename-2.1.0-py3.7.egg/rabbit/logx/__pycache__/setup_logging.cpython-37.pyc
+/Users/zk/git/pythonPrj/best_practice/env/bin/mycmd
