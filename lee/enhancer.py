@@ -85,7 +85,7 @@ class Enhancer:
 #             return ' '*count
 
         def pp(q):
-            mark =green('✔') if q.status and 'a' in q.status else ' '
+            mark =green('✓') if q.status and 'a' in q.status else ' '
 
             line_new = '{}{:<3}{:<8}{:<40}{:<5}'.format(
                 mark,
