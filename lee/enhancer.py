@@ -2,14 +2,15 @@
 from termcolor import colored
 import logging
 import json
-from .exts_map import ext2language,language2extAndComemnt
-import html2markdown
-from .utils import jsonp
-from bs4 import BeautifulSoup
 import os
+from bs4 import BeautifulSoup
 from pygments import highlight
 from pygments.lexers import PythonLexer,CppLexer,MarkdownLexer
 from pygments.formatters import TerminalFormatter  as tf
+import html2markdown
+
+from .exts_map import ext2language,language2extAndComemnt
+from .utils import jsonp
 from .highlight_lexer import terminal_print
 
 

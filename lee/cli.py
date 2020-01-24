@@ -1,6 +1,6 @@
 #coding: utf-8
 from .transport import Transport
-from  diskcache import FanoutCache,Cache
+from  diskcache import Cache
 import logging
 logger = logging.getLogger(__name__)
 class Cli:
@@ -30,7 +30,6 @@ class Cli:
         return ret
 
     def findAll(self,reverse=True):
-        # trigger refresh cache if self.cache_questions  is empty
         self.find(1)
         ints = [int(x) for x in self.cache_questions.iterkeys()]
         for qid in sorted(ints,reverse=reverse):
@@ -50,9 +49,7 @@ class Cli:
                     if q.qid == str(c["question"]["questionId"]): 
                         q.load_from_translation(c)
                         self.cache_questions[q.qid]=q
-#                         pprint(vars(q))
                         break 
-
 
         return self.cache_questions.get(qid)
         

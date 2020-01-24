@@ -1,5 +1,5 @@
 halo==0.0.28
-diskcache==4.0.0
+diskcache==4.1.0
 Pygments==2.3.1
 setuptools==40.6.3
 termcolor==1.1.0
@@ -7,3 +7,5 @@ requests==2.22.0
 html2markdown==0.1.7
 pytest==5.2.1
 beautifulsoup4==4.8.1
+pyyaml=5.3
+coloredlogs=10.0

@@ -4,9 +4,10 @@ import argparse
 from halo import Halo
 import json
 import time
+from pprint import pprint
+
 
 from .logx import setup_logging
-
 setup_logging()
 
 from .enhancer import *
@@ -15,7 +16,6 @@ from .utils import jsonp
 from .question import Question
 from .solution import Solution
 from .cli import Cli
-from pprint import pprint
 
 def main():
     entry_point()
