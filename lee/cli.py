@@ -1,6 +1,7 @@
 #coding: utf-8
 from .transport import Transport
 from .question import Question
+from .solution import Solution
 from  diskcache import Cache
 import logging
 logger = logging.getLogger(__name__)
