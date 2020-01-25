@@ -10,7 +10,9 @@ def setup_logging(default_path='logging.yaml', default_level=logging.INFO, env_k
     | **@author:** Prathyush SP
     | Logging Setup
     """
+    mydir = os.path.dirname(os.path.abspath(__file__))
     path = default_path
+    path = os.path.join(mydir,path)
     value = os.getenv(env_key, None)
     if value:
         path = value
