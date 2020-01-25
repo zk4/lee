@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
 
-VERSION = (2, 2, 0)
+VERSION = (2, 3, 0)
 __version__ = '.'.join(map(str, VERSION[0:3]))
-__description__ = '''this is a description'''
+__description__ = '''Yet another leetcode cli'''
 __author__ = 'zk'
 __author_email__ = ''
 __homepage__ = 'https://github.com/zk4/lee'

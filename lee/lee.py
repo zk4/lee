@@ -49,6 +49,7 @@ def ls(args,b):
 
 def login(args,b):
     b.login()
+
 def main(args):
     cli = Cli()
     b =Enhancer(cli,args)
@@ -110,10 +111,3 @@ def createParse():
     login_parser = subparsers.add_parser('login',formatter_class=argparse.ArgumentDefaultsHelpFormatter, description="",  help='login ')
     login_parser.set_defaults(func=login)
     return parser
-
-    
-    
-
-
-
-    
