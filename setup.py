@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
 
-VERSION = (2, 1, 0)
+VERSION = (2, 2, 0)
 __version__ = '.'.join(map(str, VERSION[0:3]))
 __description__ = '''this is a description'''
 __author__ = 'zk'
