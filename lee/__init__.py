@@ -1,6 +1,13 @@
 #coding: utf-8
-from .lee import entry_point
-from .lee import main
+from .lee import (
+        entry_point ,
+        main,
+        createParse
+
+        )
 
 
-__all__ = ['entry_point','main']
+__all__ = ['entry_point',
+        'main',
+        'createParse'
+        ]
