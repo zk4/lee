@@ -33,7 +33,6 @@ def push(args,b):
     if args.test:
         b.test(args.filepath)
     else:
-        print("submit")
         b.submit(args.filepath)
 
 def ls(args,b):
