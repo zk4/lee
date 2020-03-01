@@ -19,15 +19,11 @@ from .question import Question
 from .solution import Solution
 from .cli import Cli
 
-def main():
-    entry_point()
 
 def entry_point():
     parser = createParse()
     mainArgs=parser.parse_args()
     main(mainArgs)
-
-
 
 def pull(args,b):
     b.pull(args.id)
@@ -65,7 +61,7 @@ def createParse():
     show_parser = subparsers.add_parser('show',formatter_class=argparse.ArgumentDefaultsHelpFormatter,aliases=["ls"], description="",  help='show questions, solution')
     show_parser.set_defaults(func=ls)
     show_parser.add_argument("ids",  help="question ids Ex: 1  \n  1,2,5  or 1-20  or all" )
-    show_parser.add_argument('-s', '--solution_count', help='show top rated solution count')  
+    show_parser.add_argument('-s', '--solution_count',default=1, type=int, help='show top rated solution count')  
     # show_parser.add_argument('-d', '--detail', help='show quesiton detail')  
     show_parser.add_argument('-m', '--markdown', action='store_true', help='output solution markdown only effect when -s is specified')  
     show_parser.add_argument('-c', '--clean', help='clean mode, no garbage generated, easy to pipe the output')  

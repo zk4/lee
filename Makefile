@@ -30,10 +30,10 @@ main:
 	python -m src.main
 
 install: uninstall
-	sudo pip install . 
+	pip install . 
 
 uninstall:
-	sudo pip uninstall lee
+	pip uninstall -y lee
 
 run:
 	lee 2

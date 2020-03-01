@@ -21,7 +21,8 @@ class Cli:
 
     def submit(self,qid ,content,language):
         ret=  self.transport.submit(qid,content,language)
-        self.cache_questions.pop( str(qid) )
+        if str(qid) in self.cache_questions:
+            self.cache_questions.pop( str(qid) )
         return ret
 
 

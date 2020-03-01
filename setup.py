@@ -8,7 +8,7 @@ version = versionfile.read_text().split("\n")[0]
 
 VERSION = (int(mainv), int(modulev), int(minorv))
 __version__ = '.'.join(map(str, VERSION[0:3]))
-__description__ = '''this is a description'''
+__description__ = '''yet another leetcode cli'''
 __author__ = 'zk'
 __author_email__ = 'liuzq7@gmail.com'
 __homepage__ = 'https://github.com/zk4/lee'

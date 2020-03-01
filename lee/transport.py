@@ -144,7 +144,7 @@ class Transport:
             while "state" in ret and ret["state"]!='SUCCESS':
                 time.sleep(1)
                 ret = self.check(submission_id)       
-            print(ret)
+            # print(ret)
             return  ret
         else:
             try:
