@@ -2,15 +2,12 @@
 import sys
 import os
 import argparse
-from halo import Halo
 import json
 import time
 from pprint import pprint
-
-
-
+import logging
 from .logx import setup_logging
-setup_logging()
+
 
 from .enhancer import *
 from .transport import Transport
@@ -19,6 +16,8 @@ from .question import Question
 from .solution import Solution
 from .cli import Cli
 
+setup_logging()
+logger = logging.getLogger(__name__)
 
 def entry_point():
     parser = createParse()
@@ -47,6 +46,7 @@ def login(args,b):
     b.login()
 
 def main(args):
+    logger.error("hello")
     cli = Cli()
     b =Enhancer(cli,args)
     args.func(args,b)
