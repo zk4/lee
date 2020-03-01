@@ -52,6 +52,7 @@ class Enhancer:
         for q in Enhancer.parse_id(qid):
             self.generate(q,self.mainArgs)
 
+
     def extractFileInfo(self,filePath):
         qid = int(os.path.basename(filePath).split(".")[0])
         ext =  os.path.basename(filePath).split(".")[-1]

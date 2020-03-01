@@ -8,8 +8,6 @@ class Question:
     def __init__(self):
         self._raw_question=None
         self._raw_detail=None
-
-
         self._eng_name = None 
 #         self._eng_slug_name = None
         self._chs_name = None 
