@@ -36,8 +36,7 @@ uninstall:
 	pip uninstall -y lee
 
 run:
-	lee 2
-	python -m lee 2
+	python -m lee ls 2
 	
 
 all: rm uninstall install run 
