@@ -46,7 +46,6 @@ def login(args,b):
     b.login()
 
 def main(args):
-    logger.error("hello")
     cli = Cli()
     b =Enhancer(cli,args)
     args.func(args,b)

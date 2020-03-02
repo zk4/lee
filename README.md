@@ -1,4 +1,7 @@
+# Intro
 Yet Anther LeetCode Cli
+
+Only test on Mac 
 
 # Api is similar to git
 - lee ls 
